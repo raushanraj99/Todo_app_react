@@ -10,6 +10,7 @@ import Register from './pages/Register';
 import { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 import { Context, server } from './main';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   const {setUser,setIsAuthenticated,setLoading} =useContext(Context)
@@ -40,7 +41,7 @@ function App() {
         <Route path='/profile' element={<Profile/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
-
+        <Route path='*' element={<PageNotFound/>} />
       </Routes>
       <Toaster/>
 
