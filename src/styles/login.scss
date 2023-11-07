@@ -1,0 +1,17 @@
+.login>section{
+   @include container(900,unset,2rem);
+   min-height: 80%;
+   width: 70%;
+   background-color: $color4;
+   
+   form{
+      @include flexBox(column,center,flex-start,2rem);
+      @include inputs;
+
+      button{
+         @include styledText(0.9rem);
+         @include myButton(18.75rem);
+      }
+
+   }
+}
